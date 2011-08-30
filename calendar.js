@@ -149,7 +149,7 @@ var Calendar = new Class({
 				for (var j = count; j >= 0; j--){
 					if (values[i][j].contains('-')){ // a range
 						var val = values[i][j].split('-');
-						for (var k = val[0]; k <= val[1]; k++){
+						for (var k = parseInt(val[0]); k <= parseInt(val[1]); k++){
 							if (!values[i].contains(k)){ values[i].push(k + ''); }
 						}
 						values[i].splice(j, 1);
